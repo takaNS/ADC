@@ -33,7 +33,6 @@ async def func():
 			sys.exit(0)
 			
 while True:
-	# buf = [[0] * 5 for i in range(10000)]
 	buf = np.empty((10000,5),dtype=object)
 	cnt = 0
 	now = dt.datetime.now()
@@ -50,8 +49,6 @@ while True:
 			except ValueError:
 				# print('ValueError')
 				continue
-			
-			print(buf[cnt])
 			cnt = cnt + 1
 
 	os.makedirs(dir, exist_ok=True)
