@@ -1,10 +1,6 @@
 #! /usr/bin/python3
 
-import datetime as dt
-import numpy as np
-import serial
 import sys
-import os
 
 try:
 	SerialPort = sys.argv[1]
@@ -16,6 +12,11 @@ except IndexError:
 	for p in list(serial.tools.list_ports.comports()):
 		print(p.device , " : " , p.description)
 	sys.exit(127)
+
+import datetime as dt
+import numpy as np
+import serial
+import os
 
 S = serial.Serial(SerialPort,115200)
 
